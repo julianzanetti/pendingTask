@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
-from flask import redirect
+from django.shortcuts import redirect
 
 from base.models import Tarea
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
