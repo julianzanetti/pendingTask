@@ -1,5 +1,5 @@
 # This Dockerfile sets up a Python environment for a web application.
-FROM python:3.11
+FROM python:3.11-alpine
 
 # Establish the working directory
 WORKDIR /app
