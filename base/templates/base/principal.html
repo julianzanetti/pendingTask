@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  
+    <title>Lista de Pendientes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #104488;
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgb(51, 141, 243);
+            border-radius: 5px;
+            box-shadow: 2 2 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #141414;
+        }
+        .barra-superior {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px 5px 0 0;
+        }
+        .elementos-tareas {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-top: 1px solid #104488;
+        }
+        .titulo-tarea {
+            display: flex;
+        }
+        .titulo-tarea a {
+            text-decoration: none;
+            color: #141414;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .titulo-tarea-completo {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105,162,105);
+            border-radius: 50px;
+        }
+        .titulo-tarea-incompleto {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(243, 105, 105);
+            border-radius: 50px;
+        }
+        .eliminar {
+            color: #ff0000;
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: 900;
+            line-height: 0;
+        }
+        .volver {
+            display: inline-block; 
+            padding: 2px 4px; 
+            background-color: #ffffff; 
+            color: #333; 
+            border: 1px solid #333; 
+            border-radius: 2px; 
+            text-decoration: none; 
+            font-size: 16px; 
+            margin-left: 8px;
+        }
+        .barra-busqueda {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        #enlace-agregar {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        input[type="text"], input[type="password"], textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 90%;
+        }
+        label {
+            display: block;
+            padding-top: 10px !important;
+        }
+        .boton {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .cuerpo-tarjeta {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

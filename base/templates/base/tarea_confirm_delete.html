@@ -1,0 +1,23 @@
+{% extends 'base/principal.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Elimincacion de Tarea</title>
+</head>
+<body>
+    {% block content %}
+    <div class="barra-superior">
+        <a href="{% url 'pendientes' %}">&#x1F860; Volver</a>
+    </div>
+
+    <div class="cuerpo-tarjeta">
+        <form method="POST">
+            {% csrf_token %}
+            <p>¿Estás seguro de que deseas eliminar la tarea: {{ tarea }}?</p>
+            <input type="submit" value="Eliminar">
+        </form>
+    </div>        
+    {% endblock content %}
+</body>
+</html>

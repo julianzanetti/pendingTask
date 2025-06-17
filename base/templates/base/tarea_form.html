@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Tareas</title>
+</head>
+<body>
+    {% extends 'base/principal.html' %}
+    {% block content %}
+    <div class="barra-superior">
+        <h1>Formulario de Tareas</h1>
+    </div>
+    
+    <div class="cuerpo-tarjeta">
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Enviar">
+            <a class="volver" href="{% url 'pendientes' %}">Volver</a>
+        </form>
+    </div>        
+    {% endblock content %}
+</body>
+</html> 
