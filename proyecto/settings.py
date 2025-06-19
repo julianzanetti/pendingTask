@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'pendingtask_db',
         'USER': 'julian',
         'PASSWORD': 'carc1889',
-        'HOST': 'db',
+        'HOST': 'db-pendingtask',
         'PORT': '5432',
     }
 }
