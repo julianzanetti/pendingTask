@@ -13,9 +13,6 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Migraciones si querés ignorarlas automáticamente (opcional)
-# base/migrations/__pycache__/
-
 # Archivos de configuración locales
 *.log
 *.pot
@@ -39,9 +36,6 @@ Thumbs.db
 # Archivos generados por Django
 /static/
 media/
-
-# Node (si usás frontend)
-node_modules/
 
 # Otros archivos temporales
 *.bak
