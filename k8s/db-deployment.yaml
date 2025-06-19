@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deploy-pendingtask
+spec:
+  selector:
+    matchLabels:
+      app: db-pendingtask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: db-pendingtask
+    spec:
+      containers:
+      - name: db-pendingtask
+        image: postgres:alpine
+        env:
+        - name: POSTGRES_DB
+          value: pendingtask_db
+        - name: POSTGRES_USER
+          value: julian
+        - name: POSTGRES_PASSWORD
+          value: carc1889
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: db-pendingtask-storage
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: db-pendingtask-storage
+        emptyDir: {}

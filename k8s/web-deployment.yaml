@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deploy-pedingtask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-pedingtask
+  template:
+    metadata:
+      labels:
+        app: web-pedingtask
+    spec:
+      containers:
+      - name: web-pedingtask
+        image: julianzanetti/pending-task:1.0
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_HOST
+          value: db-pendingtask
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: pendingtask_db
+        - name: DB_USER
+          value: julian
+        - name: DB_PASSWORD
+          value: carc1889

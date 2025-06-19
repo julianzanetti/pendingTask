@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc-pedingtask
+spec:
+  selector:
+    app: web-pedingtask
+  type: NodePort
+  ports:
+  - port: 8000
+    targetPort: 8000
