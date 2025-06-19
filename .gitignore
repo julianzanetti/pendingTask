@@ -3,10 +3,6 @@ venv/
 .env/
 .envrc
 
-# Archivos de base de datos (SQLite)
-db.sqlite3
-*.sqlite3
-
 # Archivos de respaldo y exportación de datos
 *.json
 *.backup
