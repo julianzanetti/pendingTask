@@ -1,5 +1,5 @@
 services:
-  db:
+  db-pendingtask:
     image: postgres:alpine
     environment:
       POSTGRES_USER: julian
@@ -15,7 +15,7 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db  
+      - db-pendingtask
     networks:
       - pendingtask_network
     volumes:

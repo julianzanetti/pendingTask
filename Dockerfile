@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY requirements.txt /app/
 
+# Install system dependencies
+RUN apk add --no-cache postgresql-client
+
 # Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -17,4 +20,5 @@ COPY . /app/
 EXPOSE 8000
 
 # Command to run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+RUN chmod +x /app/entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]
