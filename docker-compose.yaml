@@ -21,5 +21,10 @@ services:
     volumes:
       - .:/app
     restart: always
+    environment:
+      DB_HOST: db-pendingtask
+      DB_USER: julian
+      DB_PASSWORD: carc1889
+      DB_NAME: pendingtask_db
 networks:
   pendingtask_network:
