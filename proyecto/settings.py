@@ -25,6 +25,10 @@ SECRET_KEY = 'django-insecure-mgho@=d&^ouw1ue91#1(5isx9ul&($7eacs19(oranj!o&w8tx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://pendingtask.julianzanetti-lab.com'
+]
+
 ALLOWED_HOSTS = ["pendingtask.julianzanetti-lab.com"]
 
 
